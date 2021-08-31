@@ -1,0 +1,96 @@
+
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 50px 50px 50px 50px;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+    grid-template-areas: "nav nav nav nav" "sidebar main main main" "sidebar content1 content2 content3" "sidebar footer footer footer ";
+    grid-gap: 0.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #004d40;
+    text-align: left;
+}
+
+nav {
+    background: #6fcf97;
+    grid-area: nav;
+    position: absolute;
+width: 1920px;
+height: 70px;
+left: 0px;
+top: 0px;
+}
+
+#sidebar {
+    background: #6fcf97;
+    grid-area: sidebar;
+    position: absolute;
+    width: 220px;
+    height: 100%;
+    left: 0px;
+    top: 70px;
+}
+
+#content1 {
+    background: #e0e0e0;
+    grid-area: content1;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 394px;
+    top: 110px;
+}
+
+#content2 {
+    background: #e0e0e0;
+    grid-area: content2;
+    position: absolute;
+width: 150px;
+height: 150px;
+left: 786px;
+top: 110px;
+
+}
+
+#content3 {
+    background: #e0e0e0;
+    grid-area: content3;
+    position: absolute;
+width: 150px;
+height: 150px;
+left: 1178px;
+top: 110px;
+}
+#content4 {
+    background: #e0e0e0;
+    grid-area: content4;
+    position: absolute;
+width: 150px;
+height: 150px;
+left: 1570px;
+top: 110px;
+}
+
+a {
+    text-align: center;
+    display: block;
+    font-family: inherit;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+@media only screen and (max-width: 550px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas: "nav" "sidebar" "content1" "content2" "content3 content4";
+    }
+}
